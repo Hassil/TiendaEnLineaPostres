@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sistema de Administración de Proyectos</title>
+    <title>Administrador</title>
     <link rel="stylesheet" href="{{asset("css/bootstrap.css")}}">
   <script src="{{asset("js/jquery-3.2.1.js")}}"></script>
 </head>
@@ -51,8 +51,8 @@
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
             <li class="active"><a href="#">Perfil <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Registrar Usuario</a></li>
-            <li><a href="#">Generar articulos</a></li>
+            <li><a href="{{url('/register')}}">Registrar Usuario</a></li>
+            <li><a href="{{url('/registrarProductos')}}">Registrar articulos</a></li>
                     </ul>
           <ul class="nav nav-sidebar">
             

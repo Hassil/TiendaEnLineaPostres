@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->middleware('auth');
 
 Route::get('/administrador', 'administradorController@ingresar');
+Route::get('/registrarProductos', 'productosController@ingresar');
+Route::post('/guardaProductos', 'productosController@guardar');
