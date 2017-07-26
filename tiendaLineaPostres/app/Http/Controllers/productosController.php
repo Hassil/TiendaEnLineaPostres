@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Producto;
-
-
+use Excel;
 use DB;
 
 
@@ -35,6 +34,21 @@ class productosController extends Controller
         return redirect('/registrarProductos');
 
 
+    }
+   public function ingresarCSV(){
+      
+      return view('productosCSv');
+
+    }
+
+
+ public function guardarProductoCsv(Request $datos){
+      Excel::load($datos->archivoCSV, function($reader) {
+          foreach ($reader->get() as $book) {
+              Producto::firstOrCreate($book->toArray());
+            }
+      });
+      return redirect()->back()->with('message','Se registraron correctamente los productos del archivo CSV');
     }
  
 }

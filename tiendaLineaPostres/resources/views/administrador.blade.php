@@ -52,12 +52,13 @@
           <ul class="nav nav-sidebar">
             <li class="active"><a href="#">Perfil <span class="sr-only">(current)</span></a></li>
             <li><a href="{{url('/register')}}">Registrar Usuario</a></li>
-            <li><a href="{{url('/registrarProductos')}}">Registrar articulos</a></li>
+            <li><a href="{{url('/registrarProductos')}}">Registrar articulos individuales</a></li>
+
                     </ul>
           <ul class="nav nav-sidebar">
             
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
+            <li><a href="{{url('/registrarCSV')}}">Registrar articulos por CSV</a></li>
+            <li><a href="{{url('/registrarCategoria')}}">Registrar categoria</a></li>
             <li><a href="">Another nav item</a></li>
             <li><a href="">More navigation</a></li>
           </ul>
