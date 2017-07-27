@@ -493,8 +493,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 		    <div class="resp-tabs-container">
-
+                 @foreach($productos as $p)
 		    	<div class="tab1">
+		    	<div class="row">
 							<div class="col-md-3 product-men">
 								<div class="men-pro-item simpleCart_shelfItem">
 									<div class="men-thumb-item">
@@ -505,10 +506,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="single.html">Formal Blue Shirt</a></h4>
+										<h4><a href="single.html">{{$p->nombre}}</a></h4>
 										<div class="info-product-price">
-											<span class="item_price">$45.99</span>
-											<del>$69.71</del>
+											<span class="item_price">{{$p->precio}}</span>
+											
 										</div>
 										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
 															<form action="#" method="post">
@@ -536,6 +537,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 		   </div>			
+		   @endforeach
 				<!--
 				<div id="horizontalTab">
 						<ul class="resp-tabs-list">

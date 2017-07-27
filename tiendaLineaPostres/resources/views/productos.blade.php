@@ -49,6 +49,20 @@
         </div>
         </div>
 
+         <div class="form-group">
+      <label for="categoria" class="col-lg-4 control-label">Categoria</label>
+      <div class="col-lg-6">
+<select name="idCategoria" class="form-control">
+    <option value="0">Seleccione categoria</option>
+    @foreach($categorias as $c)
+    <option value="{{$c->id}}">{{$c->nombre}}</option>
+    @endforeach
+
+
+  </select>     
+   </div>
+    </div>
+
         
 
      

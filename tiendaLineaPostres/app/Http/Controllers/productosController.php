@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Producto;
+use App\Categoria;
 use Excel;
 use DB;
 
@@ -12,8 +13,12 @@ use DB;
 class productosController extends Controller
 {
   public function ingresar(){
+
+    $categorias=Categoria::all();
+      
+      return view('productos',compact('categorias'));
     	
-    	return view('productos');
+    
 
     }
 
@@ -26,6 +31,7 @@ class productosController extends Controller
 		$producto ->precio=$datos->input('precio');
 		$producto ->codigo=$datos->input('codigo');
 		$producto ->piezas=$datos->input('piezas');
+    $producto ->idCategoria=$datos->input('idCategoria');
 		
 		$producto ->save();
 

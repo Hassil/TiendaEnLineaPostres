@@ -11,6 +11,7 @@ use DB;
 class categoriaController extends Controller
 {
   public function ingresar(){
+        
     	
     	return view('categoria');
 
