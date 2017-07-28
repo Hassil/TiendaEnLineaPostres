@@ -30,3 +30,13 @@ Route::get('/registrarCategoria', 'categoriaController@ingresar');
 Route::post('/guardaCategoria', 'categoriaController@guardar');
 Route::get('/categoria/{id}','categoriaController@filtroCategoria');
 
+
+Route::get('/consultaProductos', 'productosController@consultaProductos');
+
+Route::get('/editarProductos/{id}', 'productosController@editar');
+
+Route::post('/actualizarProductos/{id}', 'productosController@actualizar');
+Route::get('/eliminaProductos/{id}', 'productosController@eliminar');
+
+
+

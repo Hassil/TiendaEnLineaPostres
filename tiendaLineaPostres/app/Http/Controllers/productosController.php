@@ -56,5 +56,43 @@ class productosController extends Controller
       });
       return redirect()->back()->with('message','Se registraron correctamente los productos del archivo CSV');
     }
+
+     public function consultaProductos(){
+      $productos = Producto::all();  
+
+       return view('consultaProductos',compact('productos'));
+
+    }
+
+    public function editar($id){
+   $productos=Producto::find($id);
+   $categorias=Categoria::all();
+     return view('editarProductos', compact('productos','categorias'));
+
+  }
+
+    public function actualizar($id,Request $datos){
+        $producto=Producto::find($id);
+    $producto ->nombre=$datos->input('nombre');
+    $producto ->descripcion=$datos->input('descripcion');
+    $producto ->precio=$datos->input('precio');
+    $producto ->codigo=$datos->input('codigo');
+    $producto ->piezas=$datos->input('piezas');
+    $producto ->idCategoria=$datos->input('idCategoria');
+    
+    $producto ->save();
+
+        
+       
+        return redirect('/consultaProductos');
+
+    }
+
+      public function eliminar($id){
+    $producto=Producto::find($id);
+    $producto->delete();
+ 
+    return redirect('consultaProductos');
+   }
  
 }

@@ -59,9 +59,9 @@
             
             <li><a href="{{url('/registrarCSV')}}">Registrar articulos por CSV</a></li>
             <li><a href="{{url('/registrarCategoria')}}">Registrar categoria</a></li>
-            <li><a href="">Another nav item</a></li>
-            <li><a href="">More navigation</a></li>
-          </ul>
+            <li><a href="{{url('/consultaProductos')}}">Consultar productos</a></li>
+            <li><a href="">Consultar categorias</a></li>
+          </ul> 
           <ul class="nav nav-sidebar">
             <li><a href="">Nav item again</a></li>
             <li><a href="">One more nav</a></li>
