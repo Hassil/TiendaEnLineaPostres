@@ -28,5 +28,5 @@ Route::post('/guardarProductoCSV', 'productosController@guardarProductoCSV');
 
 Route::get('/registrarCategoria', 'categoriaController@ingresar');
 Route::post('/guardaCategoria', 'categoriaController@guardar');
-
+Route::get('/categoria','categoriaController@filtroCategoria');
 

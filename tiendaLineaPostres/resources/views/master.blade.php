@@ -97,39 +97,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li class="active menu__item menu__item--current"><a class="menu__link" href="index.html">Home <span class="sr-only">(current)</span></a></li>
 					<li class=" menu__item"><a class="menu__link" href="about.html">About</a></li>
 					<li class="dropdown menu__item">
-						<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Men's wear <span class="caret"></span></a>
-							<ul class="dropdown-menu multi-column columns-3">
+						<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias <span class="caret"></span></a>
+                          <ul class="dropdown-menu multi-column columns-3">
 								<div class="agile_inner_drop_nav_info">
-									<div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-										<a href="mens.html"><img src="images/top2.jpg" alt=" "/></a>
-									</div>
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="mens.html">Clothing</a></li>
-											<li><a href="mens.html">Wallets</a></li>
-											<li><a href="mens.html">Footwear</a></li>
-											<li><a href="mens.html">Watches</a></li>
-											<li><a href="mens.html">Accessories</a></li>
-											<li><a href="mens.html">Bags</a></li>
-											<li><a href="mens.html">Caps & Hats</a></li>
-										</ul>
+                                          @foreach($categorias as $c)
+											<li value="{{$c->id}}"><a href="{{url('/categoria')}}">{{$c->nombre}}</a></li>
+
+								               @endforeach
+										</ul>    
 									</div>
-									<div class="col-sm-3 multi-gd-img">
-										<ul class="multi-column-dropdown">
-											<li><a href="mens.html">Jewellery</a></li>
-											<li><a href="mens.html">Sunglasses</a></li>
-											<li><a href="mens.html">Perfumes</a></li>
-											<li><a href="mens.html">Beauty</a></li>
-											<li><a href="mens.html">Shirts</a></li>
-											<li><a href="mens.html">Sunglasses</a></li>
-											<li><a href="mens.html">Swimwear</a></li>
-										</ul>
 									</div>
-									<div class="clearfix"></div>
-								</div>
-							</ul>
+									</ul>
+							
 					</li>
-					<li class="dropdown menu__item">
+					<!--<li class="dropdown menu__item">
 						<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Women's wear <span class="caret"></span></a>
 							<ul class="dropdown-menu multi-column columns-3">
 								<div class="agile_inner_drop_nav_info">
@@ -161,7 +144,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<div class="clearfix"></div>
 								</div>
 							</ul>
-					</li>
+					</li> -->
 					<li class="menu__item dropdown">
 					   <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">Short Codes <b class="caret"></b></a>
 								<ul class="dropdown-menu agile_short_dropdown">
@@ -189,7 +172,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 </div>
 <!-- //banner-top -->
-<!-- Modal1 -->
+<!-- Modal1  -->
 		<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
 			<div class="modal-dialog">
 				<!-- Modal content-->
@@ -491,53 +474,54 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 		    <h3 class="wthree_text_info">Postres <span></h3>
 
-
 		    <div class="resp-tabs-container">
-                 @foreach($productos as $p)
-		    	<div class="tab1">
-		    	<div class="row">
-							<div class="col-md-3 product-men">
-								<div class="men-pro-item simpleCart_shelfItem">
-									<div class="men-thumb-item">
-										<img src="images/m1.jpg" alt="">
-										
-											
-											<span class="product-new-top"></span>
-											
-									</div>
-									<div class="item-info-product ">
-										<h4><a href="single.html">{{$p->nombre}}</a></h4>
-										<div class="info-product-price">
-											<span class="item_price">{{$p->precio}}</span>
-											
-										</div>
-										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-															<form action="#" method="post">
-																<fieldset>
-																	<input type="hidden" name="cmd" value="_cart" />
-																	<input type="hidden" name="add" value="1" />
-																	<input type="hidden" name="business" value=" " />
-																	<input type="hidden" name="item_name" value="Formal Blue Shirt" />
-																	<input type="hidden" name="amount" value="30.99" />
-																	<input type="hidden" name="discount_amount" value="1.00" />
-																	<input type="hidden" name="currency_code" value="USD" />
-																	<input type="hidden" name="return" value=" " />
-																	<input type="hidden" name="cancel_return" value=" " />
-																	<input type="submit" name="submit" value="Add to cart" class="button" />
-																</fieldset>
-															</form>
-														</div>
-																			
-									</div>
-								</div>
+                 		    	<div class="tab1">
 
-							</div>
-                         </div>
-                         </div>
+             
+
+<div class="row">
+ @foreach($productos as $p)
+	<div class="col-md-3 product-men">
+		<div class="men-pro-item">
+			<div class="men-thumb-item">
+				<img src="images/m1.jpg" alt="">					
+					<span class="product-new-top"></span>					
+			</div>
+			<div class="item-info-product ">
+				<h4><a href="single.html">{{$p->nombre}}</a></h4>
+				<div class="info-product-price">
+					<span class="item_price">{{$p->precio}}</span>
+					
+				</div>
+				<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
+
+											<form action="#" method="post">
+												<fieldset>
+													<input type="hidden" name="cmd" value="_cart" />
+													<input type="hidden" name="add" value="1" />
+													<input type="hidden" name="business" value=" " />
+													<input type="hidden" name="item_name" value="Formal Blue Shirt" />
+													<input type="hidden" name="amount" value="30.99" />
+													<input type="hidden" name="discount_amount" value="1.00" />
+													<input type="hidden" name="currency_code" value="USD" />
+													<input type="hidden" name="return" value=" " />
+													<input type="hidden" name="cancel_return" value=" " />
+													<input type="submit" name="submit" value="Add to cart" class="button" />
+												</fieldset>
+											</form>
+										</div>
+															
+					</div>
+				</div>
+	
+			</div>
+			@endforeach
+         </div>
+         </div>
 
 
 		   </div>			
-		   @endforeach
+		   
 				<!--
 				<div id="horizontalTab">
 						<ul class="resp-tabs-list">

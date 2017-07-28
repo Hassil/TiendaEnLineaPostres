@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Producto;
+use App\Categoria;
 
 use Illuminate\Http\Request;
 
@@ -29,7 +30,8 @@ class HomeController extends Controller
 
     public function master(){
        $productos=Producto::all();
-       return view('master', compact('productos'));
+       $categorias =Categoria::all();
+       return view('master', compact('productos','categorias'));
 
 
     }
