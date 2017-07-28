@@ -7,6 +7,7 @@ use App\Producto;
 use App\Categoria;
 use Excel;
 use DB;
+use Storage;
 
 
 
@@ -49,12 +50,28 @@ class productosController extends Controller
 
 
  public function guardarProductoCsv(Request $datos){
-      Excel::load($datos->archivoCSV, function($reader) {
-          foreach ($reader->get() as $book) {
-              Producto::firstOrCreate($book->toArray());
-            }
-      });
-      return redirect()->back()->with('message','Se registraron correctamente los productos del archivo CSV');
+$documento=$datos->file('archivoCSV');
+$nombre=$documento->getClientOriginalName();
+$r1= Storage::disk('documentos')->put($nombre,\File::get($documento));
+$ruta = storage_path('documentos')."/".$nombre;
+if($r1){
+  Excel::selectSheetsByIndex(0)->load($ruta,function($csv){
+    $csv->each(function($fila){
+      $productos = new Producto();
+      $productos->codigo=$fila->codigo;
+      $productos->nombre=$fila->nombre;
+      $productos->descripcion=$fila->descripcion;
+      $productos->precio=$fila->precio;
+      $productos->piezas=$fila->piezas;
+      $productos->idCategoria=$fila->idcategoria;
+      $productos->save();
+
+    });
+  });
+
+}
+
+return redirect('/consultaProductos');
     }
 
      public function consultaProductos(){

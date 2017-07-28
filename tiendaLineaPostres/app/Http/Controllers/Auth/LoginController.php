@@ -25,7 +25,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-   // protected $redirectTo = '/home';//aqui redireccionar
+   protected $redirectTo = '/';//aqui redireccionar
 
     /**
      * Create a new controller instance.
@@ -37,7 +37,7 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    public function redirectTo(){
+    /*public function redirectTo(){
 
        if(auth()->user()->rol==1){
              return '/ejemlo';
@@ -45,5 +45,5 @@ class LoginController extends Controller
      else{
     return '/administrador';
        }
-}
+}*/
 }
