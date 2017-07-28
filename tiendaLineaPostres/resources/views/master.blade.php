@@ -354,7 +354,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</a>
 		<!-- The Modal -->
     </div> 
-	<!-- //banner -->
+	<!-- //banner 
     <div class="banner_bottom_agile_info">
 	    <div class="container">
             <div class="banner_bottom_agile_info_inner_w3ls">
@@ -380,7 +380,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		    </div> 
 		 </div> 
     </div>
-	<!-- schedule-bottom -->
+
 	<div class="schedule-bottom">
 		<div class="col-md-6 agileinfo_schedule_bottom_left">
 			<img src="images/mid.jpg" alt=" " class="img-responsive" />
@@ -410,8 +410,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="clearfix"> </div>
 	</div>
-<!-- //schedule-bottom -->
-  <!-- banner-bootom-w3-agileits -->
+
 	<div class="banner-bootom-w3-agileits">
 	<div class="container">
 		<h3 class="wthree_text_info">What's <span>Trending</span></h3>
@@ -456,7 +455,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	</div>
     </div>
-<!--/grids-->
+
       <div class="agile_last_double_sectionw3ls">
             <div class="col-md-6 multi-gd-img multi-gd-text ">
 					<a href="womens.html"><img src="images/bot_1.jpg" alt=" "><h4>Flat <span>50%</span> offer</h4></a>
@@ -467,8 +466,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="clearfix"></div>
 	   </div>							
-<!--/grids-->
-<!-- /new_arrivals --> 
+ --> 
 
 	<div class="new_arrivals_agile_w3ls_info"> 
 		<div class="container">
@@ -484,7 +482,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="col-md-3 product-men">
 		<div class="men-pro-item">
 			<div class="men-thumb-item">
-				<img src="images/m1.jpg" alt="">					
+				<img src="images/carrusel/imagen.png" alt="">					
 					<span class="product-new-top"></span>					
 			</div>
 			<div class="item-info-product ">
@@ -1804,13 +1802,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	 --> 
 	<!-- /we-offer -->
-		<div class="sale-w3ls">
-			<div class="container">
-				<h6>We Offer Flat <span>40%</span> Discount</h6>
- 
-				<a class="hvr-outline-out button2" href="single.html">Shop Now </a>
-			</div>
-		</div>
+		
 	<!-- //we-offer -->
 <!--/grids-->
 <div class="coupons">
@@ -1862,7 +1854,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="footer">
 	<div class="footer_agile_inner_info_w3l">
 		<div class="col-md-3 footer-left">
-			<h2><a href="index.html"><span>E</span>lite Shoppy </a></h2>
+			<h2><a href="index.html"><span>D</span>elicias</a></h2>
 			<p>Lorem ipsum quia dolor
 			sit amet, consectetur, adipisci velit, sed quia non 
 			numquam eius modi tempora.</p>
