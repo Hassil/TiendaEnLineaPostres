@@ -92,23 +92,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				  </button>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
-				
 				<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav menu__list">
 					<li class="active menu__item menu__item--current"><a class="menu__link" href="index.html">Home <span class="sr-only">(current)</span></a></li>
-					<li class=" menu__item"><a class="menu__link" href="about.html">About</a></li>
-
+					<li class=" menu__item"><a class="menu__link" href="#">About</a></li>
 					<li class="dropdown menu__item">
-
-			<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias <span class="caret"></span></a>
-                          
-					<ul class="dropdown-menu multi-column columns-3">
+						<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias <span class="caret"></span></a>
+                          <ul class="dropdown-menu multi-column columns-3">
 								<div class="agile_inner_drop_nav_info">
 									<div class="col-sm-3 multi-gd-img">
+
 										<ul class="multi-column-dropdown">
-										
                                           @foreach($categorias as $c)
-										<li value="{{$c->id}}"><a href="{{url('/categoria')}}">{{$c->nombre}}</a></li>
+											<li><a href="{{url('/categoria')}}/{{$c->id}}">{{$c->nombre}}</a></li>
 
 								               @endforeach
 										</ul>    
@@ -117,25 +113,70 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</ul>
 							
 					</li>
-
 					</ul>
 					</div>
-					   
 					</div>
 					</nav>
 					</div>
 					</div>
 					</div>
-                     
+                   <div class="new_arrivals_agile_w3ls_info"> 
+		<div class="container">
+		    <h3 class="wthree_text_info">Postres <span></h3>
+
+		    <div class="resp-tabs-container">
+                 		    	<div class="tab1">
+
+             
+
+<div class="row">
+ @foreach($productos as $p)
+	<div class="col-md-3 product-men">
+		<div class="men-pro-item">
+			<div class="men-thumb-item">
+				<img src="images/carrusel/imagen.png" alt="">					
+					<span class="product-new-top"></span>					
+			</div>
+			<div class="item-info-product ">
+				<h4><a href="single.html">{{$p->nombre}}</a></h4>
+				<div class="info-product-price">
+					<span class="item_price">Precio:${{$p->precio}}Mx</span>
+					
+				</div>
+				<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
+
+											<form action="#" method="post">
+												<fieldset>
+													<input type="hidden" name="cmd" value="_cart" />
+													<input type="hidden" name="add" value="1" />
+													<input type="hidden" name="business" value=" " />
+													<input type="hidden" name="item_name" value="Formal Blue Shirt" />
+													<input type="hidden" name="amount" value="30.99" />
+													<input type="hidden" name="discount_amount" value="1.00" />
+													<input type="hidden" name="currency_code" value="USD" />
+													<input type="hidden" name="return" value=" " />
+													<input type="hidden" name="cancel_return" value=" " />
+													<input type="submit" name="submit" value="Add to cart" class="button" />
+												</fieldset>
+											</form>
+										</div>
+															
+					</div>
+				</div>
+	
+			</div>
+			@endforeach
+         </div>
+         </div>
+
+
+		   </div>	
+
+
+
 
 
 					</body>
-					<!-- js -->
-<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-<!-- //js -->
-<script src="js/modernizr.custom.js"></script>
-	<!-- Custom-JavaScript-File-Links --> 
-	<!-- cart-js -->
-	<script src="js/minicart.min.js"></script>
-
 					</html>
+
+                     

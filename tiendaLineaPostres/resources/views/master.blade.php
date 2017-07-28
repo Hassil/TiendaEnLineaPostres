@@ -95,15 +95,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav menu__list">
 					<li class="active menu__item menu__item--current"><a class="menu__link" href="index.html">Home <span class="sr-only">(current)</span></a></li>
-					<li class=" menu__item"><a class="menu__link" href="about.html">About</a></li>
+					<li class=" menu__item"><a class="menu__link" href="#">About</a></li>
 					<li class="dropdown menu__item">
 						<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias <span class="caret"></span></a>
                           <ul class="dropdown-menu multi-column columns-3">
 								<div class="agile_inner_drop_nav_info">
 									<div class="col-sm-3 multi-gd-img">
+
 										<ul class="multi-column-dropdown">
                                           @foreach($categorias as $c)
-											<li value="{{$c->id}}"><a href="{{url('/categoria')}}">{{$c->nombre}}</a></li>
+											<li><a href="{{url('/categoria')}}/{{$c->id}}">{{$c->nombre}}</a></li>
 
 								               @endforeach
 										</ul>    
@@ -488,7 +489,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="item-info-product ">
 				<h4><a href="single.html">{{$p->nombre}}</a></h4>
 				<div class="info-product-price">
-					<span class="item_price">{{$p->precio}}</span>
+					<span class="item_price">Precio:${{$p->precio}}Mx</span>
 					
 				</div>
 				<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">

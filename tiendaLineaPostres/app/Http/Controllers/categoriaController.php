@@ -33,9 +33,13 @@ class categoriaController extends Controller
 
     }
 
-    public function filtroCategoria(){
-          $productos=Producto::all();
+    public function filtroCategoria($id){
+          
        $categorias =Categoria::all();
+       $productos=DB::table('productos')
+->select('productos.*')
+->where('idCategoria','=',$id)
+ ->get();
        return view('filtroCategoria', compact('productos','categorias'));
 
       
