@@ -14,7 +14,7 @@
 
 
 Auth::routes();
-Route::get('/', 'HomeController@master')->name('/');
+Route::get('/', 'HomeController@master');
 
 
 Route::get('/home', 'HomeController@index')->middleware('auth');
@@ -37,6 +37,10 @@ Route::get('/editarProductos/{id}', 'productosController@editar');
 
 Route::post('/actualizarProductos/{id}', 'productosController@actualizar');
 Route::get('/eliminaProductos/{id}', 'productosController@eliminar');
+
+Route::get('/productoIndividual/{id}','productosController@productoIndividual');
+Route::post('/guardaComentario','comentariosController@guardar');
+
 
 
 

@@ -119,60 +119,131 @@
 		</div>
 		</div>
 		</div>
-	                   <div class="new_arrivals_agile_w3ls_info"> 
-			<div class="container">
-			    <h3 class="wthree_text_info">Postres <span></h3>
+	                  
 
-			    <div class="resp-tabs-container">
-	                 		    	<div class="tab1">
-
-	             
-
-	<div class="row">
-	 @foreach($productos as $p)
-		<div class="col-md-3 product-men">
-			<div class="men-pro-item">
-				<div class="men-thumb-item">
+      
+<div class="banner-bootom-w3-agileits">
+	<div class="container">
+	     <div class="col-md-4 single-right-left ">
+			<div class="grid images_3_of_2">
+				<div class="flexslider">
+					 <div class="men-thumb-item">
 					<img src="../images/carrusel/imagen.png" alt="">					
 						<span class="product-new-top"></span>					
 				</div>
-				<div class="item-info-product ">
-					<h4><a href="{{url('/productoIndividual')}}/{{$p->id}}">{{$p->nombre}}</a></h4>
-					<div class="info-product-price">
-						<span class="item_price">Precio:${{$p->precio}}Mx</span>
+					
+					<div class="clearfix"></div>
+				</div>	
+			</div>
+		</div>
+		<div class="col-md-8 single-right-left simpleCart_shelfItem">
+					@foreach($productos as $p)
+					<h3>{{$p->nombre}}</h3>
+					<p><span class="item_price">${{$p->nombre}}</span></p>
+					<div class="rating1">
+						<span class="starRating">
+							<input id="rating5" type="radio" name="rating" value="5">
+							<label for="rating5">5</label>
+							<input id="rating4" type="radio" name="rating" value="4">
+							<label for="rating4">4</label>
+							<input id="rating3" type="radio" name="rating" value="3" checked="">
+							<label for="rating3">3</label>
+							<input id="rating2" type="radio" name="rating" value="2">
+							<label for="rating2">2</label>
+							<input id="rating1" type="radio" name="rating" value="1">
+							<label for="rating1">1</label>
+						</span>
+					</div>
+					<div class="description">
+					<h5>Descripcion</h5>
+					<p>
+						sjfsdjfksdfjkds
+					</p>
 						
-					</div>
-					<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
 
-							<form action="#" method="post">
-								<fieldset>
-									<input type="hidden" name="cmd" value="_cart" />
-									<input type="hidden" name="add" value="1" />
-									<input type="hidden" name="business" value=" " />
-									<input type="hidden" name="item_name" value="Formal Blue Shirt" />
-									<input type="hidden" name="amount" value="30.99" />
-									<input type="hidden" name="discount_amount" value="1.00" />
-									<input type="hidden" name="currency_code" value="USD" />
-									<input type="hidden" name="return" value=" " />
-									<input type="hidden" name="cancel_return" value=" " />
-									<input type="submit" name="submit" value="Add to cart" class="button" />
-								</fieldset>
-							</form>
-						</div>
-																
-						</div>
 					</div>
-		
-				</div>
-				@endforeach
-	         </div>
-	      </div>
-	   </div>	
+					
+					@endforeach
+					
+					<div class="occasion-cart">
+						<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
+															<form action="#" method="post">
+																<fieldset>
+																	<input type="hidden" name="cmd" value="_cart">
+																	<input type="hidden" name="add" value="1">
+																	<input type="hidden" name="business" value=" ">
+																	<input type="hidden" name="item_name" value="Wing Sneakers">
+																	<input type="hidden" name="amount" value="650.00">
+																	<input type="hidden" name="discount_amount" value="1.00">
+																	<input type="hidden" name="currency_code" value="USD">
+																	<input type="hidden" name="return" value=" ">
+																	<input type="hidden" name="cancel_return" value=" ">
+																	<input type="submit" name="submit" value="Add to cart" class="button">
+																</fieldset>
+															</form>
+														</div>
+																			
+					</div>
+					
+					
+		      </div>
+	 			<div class="clearfix"> </div>
+				<!-- /new_arrivals --> 
+	<div class="responsive_tabs_agileits"> 
+				<div id="horizontalTab">
+						<h1>Comentarios</h1>
+					<div class="resp-tabs-container">
+					<!--/tab_one-->
+					  
+						<div class="tab2">
+							
+							<div class="single_page_agile_its_w3ls">
+								<div class="bootstrap-tab-text-grids">
+								
+									<div class="bootstrap-tab-text-grid">
+										
+										<div class="bootstrap-tab-text-grid-right">
+											<ul>
+												<li value=""><a href="#">admi</a></li>
+												<li><a href="#"><i class="fa fa-reply-all" aria-hidden="true"></i> Reply</a></li>
+											</ul>
+											<p >Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget.Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis 
+												suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem 
+												vel eum iure reprehenderit.</p>
+										</div>
+										<div class="clearfix"> </div>
+						             </div>
+									 <div class="add-review">
+										<h4>add a review</h4>
+                                         
+										<form action="{{url('/guardaComentario')}}" method="post">
+										<input id="token" type="hidden" name="_token" value="{{csrf_token() }}">
+												<input type="text" name="nombre" required="nombre">
+												<input type="email" name="correo" required="correo"> 
+												<textarea name="comentario" required="comentario"></textarea>
+                                                @foreach($productos as $p)
+                                                 <input type="hidden" name="idProducto" value="{{$p->id}}">
+                                                @endforeach
+
+											<input type="submit" value="ENVIAR">
+										</form>
+
+									</div>
+								 </div>
+								 
+							 </div>
+						 </div>
+						  
+					</div>
+				</div>	
+			</div>
+
+
+
+
 	</body>
 
 	<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="../js/bootstrap.js"></script>
 
 </html>
-
-                     

@@ -105,11 +105,20 @@ return redirect('/consultaProductos');
 
     }
 
-      public function eliminar($id){
+    public function eliminar($id){
     $producto=Producto::find($id);
     $producto->delete();
  
     return redirect('consultaProductos');
    }
  
+  public function productoIndividual($id){
+          $categorias =Categoria::all();
+       $productos=DB::table('productos')
+->select('productos.*')
+->where('id','=',$id)
+ ->get();
+       return view('productoIndividual', compact('productos','categorias'));
+  }
+
 }

@@ -9,7 +9,7 @@
     <div class="form-group">
       <label for="nombre" class="col-lg-4 control-label">Nombre</label>
       <div class="col-lg-6">
-        <input type="text" class="form-control" name="nombre" placeholder="Nombre">
+        <input type="text" class="form-control" name="nombre" placeholder="Nombre" >
       </div>
     </div>
         </div>
