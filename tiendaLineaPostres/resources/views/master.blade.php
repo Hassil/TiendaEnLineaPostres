@@ -24,7 +24,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="container">
 		<ul>
 		    <li> <a href="{{url('/login')}}" ><i class="fa fa-unlock-alt" aria-hidden="true"></i> Inciar Sesion </a></li>
-			<li> <a href="{{url('/register')}}" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Regsitrarse </a></li>
+			<li> <a href="{{url('/register')}}" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Registrarse </a></li>
 			<li><i class="fa fa-phone" aria-hidden="true"></i> Call : 6677909090</li>
 			<li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">info@example.com</a></li>
 		</ul>
@@ -140,14 +140,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 							</ul>
 					</li> -->
-					<li class="menu__item dropdown">
-					   <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">Short Codes <b class="caret"></b></a>
-								<ul class="dropdown-menu agile_short_dropdown">
-									<li><a href="icons.html">Web Icons</a></li>
-									<li><a href="typography.html">Typography</a></li>
-								</ul>
-					</li>
-					<li class=" menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
+					
+					<li class=" menu__item"><a class="menu__link" href="#">Contact</a></li>
 				  </ul>
 				</div>
 			  </div>

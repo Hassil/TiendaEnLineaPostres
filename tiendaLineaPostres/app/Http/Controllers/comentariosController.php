@@ -18,10 +18,9 @@ class comentariosController extends Controller
 		
 		
 		$comentario ->save();
-
         
-       
-        return redirect('/productoIndividual');
+
+        return redirect('/');
  
 
     	

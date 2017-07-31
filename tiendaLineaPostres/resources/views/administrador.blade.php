@@ -33,11 +33,9 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="{{url('/administrador')}}">Administrador</a></li>
+        <li><a href="{{url('/administrador')}}">Inicio</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="{{url('/registrarClientes')}}">Registrate</a></li>
-      </ul>
+      
     </div>
   </div>
 </nav>
@@ -71,7 +69,10 @@
 
 
     </div>
+    
   </div>
+</div>
+</div>
 </div>
 
 <footer class="text-center">

@@ -90,7 +90,7 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav menu__list">
-					<li class="active menu__item menu__item--current"><a class="menu__link" href="index.html">Home <span class="sr-only">(current)</span></a></li>
+					<li class="active menu__item menu__item--current"><a class="menu__link" href="{{url('/')}}">Home <span class="sr-only">(current)</span></a></li>
 					<li class=" menu__item"><a class="menu__link" href="#">About</a></li>
 					<li class="dropdown menu__item">
 						<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias <span class="caret"></span></a>
@@ -206,7 +206,7 @@
 					<div class="description">
 					<h5>Descripcion</h5>
 					<p>
-						sjfsdjfksdfjkds
+						{{$p->descripcion}}
 					</p>
 						
 
@@ -262,13 +262,13 @@
 						             </div>
 						             @endforeach
 									 <div class="add-review">
-										<h4>add a review</h4>
+										<h4>Agregar comentario</h4>
                                          
 										<form action="{{url('/guardaComentario')}}" method="post">
 										<input id="token" type="hidden" name="_token" value="{{csrf_token() }}">
-												<input type="text" name="nombre" required="nombre">
-												<input type="email" name="correo" required="correo"> 
-												<textarea name="comentario" required="comentario"></textarea>
+												<input type="text" name="nombre" required="nombre" placeholder="Nombre">
+												<input type="email" name="correo" required="correo" placeholder="Correo electronico"> 
+												<textarea name="comentario" required="comentario" placeholder="Comentario"></textarea>
                                                 @foreach($productos as $p)
                                                  <input type="hidden" name="idProducto" value="{{$p->id}}">
                                                 @endforeach
