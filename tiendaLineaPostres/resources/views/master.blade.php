@@ -483,7 +483,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="item-info-product ">
 				<h4><a href="single.html">{{$p->nombre}}</a></h4>
 				<div class="info-product-price">
-					<span class="item_price">Precio:${{$p->precio}}Mx</span>
+					<span class="item_price">Precio:${{$p->precio}}MXN</span>
 					
 				</div>
 				<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
@@ -495,8 +495,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 													<input type="hidden" name="business" value=" " />
 													<input type="hidden" name="item_name" value="{{$p->nombre}}" />
 													<input type="hidden" name="amount" value="{{$p->precio}}" />
-													<input type="hidden" name="discount_amount" value="1.00" />
-													<input type="hidden" name="currency_code" value="USD" />
+													
+													<input type="hidden" name="currency_code" value="MXN" />
 													<input type="hidden" name="return" value=" " />
 													<input type="hidden" name="cancel_return" value=" " />
 													<input type="submit" name="submit" value="Add to cart" class="button" />
@@ -1873,13 +1873,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-4 sign-gd">
 					<h4>Our <span>Information</span> </h4>
 					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="mens.html">Men's Wear</a></li>
-						<li><a href="womens.html">Women's wear</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="typography.html">Short Codes</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
+											</ul>
 				</div>
 				
 				<div class="col-md-5 sign-gd-two">
@@ -1950,7 +1944,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		<div class="clearfix"></div>
 	</div>
-		<p class="copy-right">&copy 2017 Elite shoppy. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+		<p class="copy-right">&copy 2017 Delicias. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
 	</div>
 </div>
 <!-- //footer -->
