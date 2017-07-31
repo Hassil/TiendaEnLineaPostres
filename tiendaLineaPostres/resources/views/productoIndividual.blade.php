@@ -199,20 +199,19 @@
 							
 							<div class="single_page_agile_its_w3ls">
 								<div class="bootstrap-tab-text-grids">
-								
+								  @foreach($comentarios as $com)
 									<div class="bootstrap-tab-text-grid">
 										
 										<div class="bootstrap-tab-text-grid-right">
 											<ul>
-												<li value=""><a href="#">admi</a></li>
+												<li value=""><a href="#">{{$com->nombre}}</a></li>
 												<li><a href="#"><i class="fa fa-reply-all" aria-hidden="true"></i> Reply</a></li>
 											</ul>
-											<p >Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget.Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis 
-												suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem 
-												vel eum iure reprehenderit.</p>
+											<p >{{$com->comentario}}</p>
 										</div>
 										<div class="clearfix"> </div>
 						             </div>
+						             @endforeach
 									 <div class="add-review">
 										<h4>add a review</h4>
                                          

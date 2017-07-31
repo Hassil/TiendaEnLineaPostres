@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Producto;
 use App\Categoria;
+use App\Comentario;
 use Excel;
 use DB;
 use Storage;
@@ -114,11 +115,16 @@ return redirect('/consultaProductos');
  
   public function productoIndividual($id){
           $categorias =Categoria::all();
+          $comentarios = DB::table('comentarios')
+          ->select('comentarios.*')
+          ->where('idProducto','=',$id)
+          ->get();
+
        $productos=DB::table('productos')
 ->select('productos.*')
 ->where('id','=',$id)
  ->get();
-       return view('productoIndividual', compact('productos','categorias'));
+       return view('productoIndividual', compact('productos','categorias','comentarios'));
   }
 
 }

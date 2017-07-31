@@ -21,7 +21,7 @@ class comentariosController extends Controller
 
         
        
-        return redirect('/registrarProductos');
+        return redirect('/productoIndividual');
  
 
     	
